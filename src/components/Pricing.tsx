@@ -33,7 +33,7 @@ const tiers: PricingTier[] = [
     description: 'Personalised guidance and community, at a sustainable pace.',
     features: [
       'Everything in Self-Paced, plus:',
-      '6 live group sessions with Ondine',
+      '6 live group sessions with Phil',
       'Weekly accountability check-ins',
       'Private Telegram support group',
       'Monthly live Q&A calls',
@@ -49,7 +49,7 @@ const tiers: PricingTier[] = [
     description: 'The most personalised path — tailored to your exact nervous system.',
     features: [
       'Everything in Guided Recovery, plus:',
-      '12 private 1:1 sessions with Ondine',
+      '12 private 1:1 sessions with Phil',
       'Customised somatic protocols',
       'Between-session messaging support',
       'Trauma-informed pace adjustments',
@@ -190,7 +190,7 @@ export function Pricing({ onApply }: { onApply: (programme: string) => void }) {
           style={{ lineHeight: '1.7' }}
         >
           Payment plans available. Sliding scale options for those in financial hardship.
-          Your healing should never be limited by finances — contact Ondine directly to discuss.
+          Your healing should never be limited by finances — contact Phil directly to discuss.
         </motion.p>
       </div>
     </section>

@@ -36,12 +36,12 @@ const faqs: FAQItem[] = [
   {
     question: 'What if I am currently in an unsafe situation?',
     answer:
-      'Your physical safety comes first — always. This programme is designed for those who are out of immediate danger but still carrying the impacts in their body and nervous system. If you are currently in an unsafe situation, please contact your local domestic violence services or call 999. Ondine can provide referrals to crisis support organisations.',
+      'Your physical safety comes first — always. This programme is designed for those who are out of immediate danger but still carrying the impacts in their body and nervous system. If you are currently in an unsafe situation, please contact your local domestic violence services or call 999. Phil can provide referrals to crisis support organisations.',
   },
   {
     question: 'Do you offer payment support or sliding scale pricing?',
     answer:
-      'Yes. Payment plans are available for all tiers, and a sliding scale is offered for those experiencing financial hardship. Your healing should not be limited by your financial situation. Contact Ondine directly and privately to discuss what would work for you — without any pressure.',
+      'Yes. Payment plans are available for all tiers, and a sliding scale is offered for those experiencing financial hardship. Your healing should not be limited by your financial situation. Contact Phil directly and privately to discuss what would work for you — without any pressure.',
   },
 ];
 
@@ -164,10 +164,10 @@ export function FAQ() {
           <p className="text-sm text-slate/50" style={{ lineHeight: '1.7' }}>
             Still have a question?{' '}
             <a
-              href="mailto:ondine@existentialpsychotherapy.com"
+              href="mailto:phil@counsellingwithphil.co.uk"
               className="text-sage hover:text-sage-dark underline underline-offset-2 transition-colors duration-200"
             >
-              Email Ondine directly
+              Email Phil directly
             </a>{' '}
             — privately and without pressure.
           </p>

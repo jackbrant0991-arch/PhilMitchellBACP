@@ -337,7 +337,7 @@ export function ApplicationModal({ isOpen, onClose, defaultProgramme }: Applicat
                                             A little more about where you are right now
                                         </h2>
                                         <p className="text-sm text-slate/50 mb-8">
-                                            This helps Ondine understand your starting point — no right or wrong answers.
+                                            This helps Phil understand your starting point — no right or wrong answers.
                                         </p>
 
                                         <fieldset className="mb-6">
@@ -379,7 +379,7 @@ export function ApplicationModal({ isOpen, onClose, defaultProgramme }: Applicat
 
                                         <div className="mb-8">
                                             <label htmlFor="modal-message" className="block text-sm font-medium text-slate mb-1.5">
-                                                Is there anything you'd like Ondine to know before she reaches out?{' '}
+                                                Is there anything you'd like Phil to know before he reaches out?{' '}
                                                 <span className="text-slate/40 font-normal">(completely optional)</span>
                                             </label>
                                             <textarea
@@ -453,7 +453,7 @@ export function ApplicationModal({ isOpen, onClose, defaultProgramme }: Applicat
                                             Thank you for taking this step
                                         </h2>
                                         <p className="text-slate/65 mb-6" style={{ lineHeight: '1.8' }}>
-                                            Ondine will be in touch within 48 hours — privately and without pressure.
+                                            Phil will be in touch within 48 hours — privately and without pressure.
                                         </p>
 
                                         <div className="flex flex-col gap-3 mb-8">

@@ -125,7 +125,7 @@ export function DiscoveryCallModal({ isOpen, onClose }: DiscoveryCallModalProps)
                                         </h2>
                                         <p className="text-sm text-slate/55 mb-8 flex items-center gap-1.5">
                                             <Lock className="w-3.5 h-3.5" aria-hidden="true" />
-                                            Ondine will confirm your time within 24 hours
+                                            Phil will confirm your time within 24 hours
                                         </p>
 
                                         <div className="space-y-5 mb-8">
@@ -200,10 +200,10 @@ export function DiscoveryCallModal({ isOpen, onClose }: DiscoveryCallModalProps)
                                     >
                                         <div className="text-4xl mb-5">🌿</div>
                                         <h2 className="font-display font-bold text-slate mb-3" style={{ fontSize: '1.6rem' }}>
-                                            You're on Ondine's radar
+                                            You're on Phil's radar
                                         </h2>
                                         <p className="text-slate/60 mb-8" style={{ lineHeight: '1.8' }}>
-                                            Ondine will confirm your time within 24 hours — privately and with no pressure.
+                                            Phil will confirm your time within 24 hours — privately and with no pressure.
                                         </p>
                                         <button
                                             onClick={handleClose}

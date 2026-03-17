@@ -13,9 +13,9 @@ const stagger: Variants = {
 };
 
 const trustBadges = [
-  { Icon: Shield, label: 'Trauma-Informed' },
-  { Icon: Heart, label: 'Nervous System Safe' },
-  { Icon: Wind, label: 'Body-Based' },
+  { Icon: Shield, label: 'BACP Registered' },
+  { Icon: Heart, label: 'Confidential Support' },
+  { Icon: Wind, label: 'Gender-Specific' },
 ];
 
 export function Hero({ onApply, onDiscovery }: { onApply: () => void; onDiscovery: () => void }) {
@@ -80,7 +80,7 @@ export function Hero({ onApply, onDiscovery }: { onApply: () => void; onDiscover
               }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-sage-light animate-pulse" />
-              Harley Street London W1G
+              Stanningley, Pudsey
             </span>
           </motion.div>
 
@@ -96,14 +96,14 @@ export function Hero({ onApply, onDiscovery }: { onApply: () => void; onDiscover
             }}
           >
             <motion.span variants={fadeUp} className="block">
-              Return to your body.
+              Reclaim your autonomy.
             </motion.span>
             <motion.span
               variants={fadeUp}
               className="block mt-1"
               style={{ color: '#b8d1bb' }}
             >
-              Reclaim your worth.
+              Recover from emotional abuse.
             </motion.span>
           </motion.h1>
 
@@ -113,8 +113,8 @@ export function Hero({ onApply, onDiscovery }: { onApply: () => void; onDiscover
             className="mt-8 text-lg md:text-xl max-w-2xl mx-auto mb-10"
             style={{ lineHeight: '1.85', color: 'rgba(253,253,248,0.75)' }}
           >
-            A 12-week somatic journey moving you from survival mode to embodied sovereignty.
-            At your pace. In your body. On your terms.
+            Professional, gender-specific support designed to help men move past coercive control and rebuild their lives.
+            At your pace. On your terms.
           </motion.p>
 
           {/* CTAs */}

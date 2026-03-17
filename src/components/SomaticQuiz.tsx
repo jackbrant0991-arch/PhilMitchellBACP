@@ -42,7 +42,7 @@ const programmeDetails: Record<Programme, { tagline: string; description: string
     },
     'Guided Recovery': {
         tagline: 'Held support throughout',
-        description: 'Personalised guidance and community, at a sustainable pace with Ondine and others who understand.',
+        description: 'Personalised guidance and community, at a sustainable pace with Phil and others who understand.',
     },
     '1:1 Intensive': {
         tagline: 'Deep, individualised support',

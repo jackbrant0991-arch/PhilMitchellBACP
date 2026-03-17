@@ -109,7 +109,7 @@ export function Header({ onApply }: { onApply: () => void }) {
           <a
             href="#"
             className="flex-shrink-0 group focus-visible:ring-2 focus-visible:ring-sage rounded-lg outline-none"
-            aria-label="Ondine Smulders Existential Psychotherapy — return to top"
+            aria-label="Phil Mitchell (BACP) — return to top"
             onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             <div className="flex items-baseline gap-2">
@@ -120,7 +120,7 @@ export function Header({ onApply }: { onApply: () => void }) {
                   color: scrolled ? '#4A4E69' : '#FDFDF8',
                 }}
               >
-                Ondine Smulders
+                Phil Mitchell
               </span>
               {/* Separator dot */}
               <span
@@ -132,7 +132,7 @@ export function Header({ onApply }: { onApply: () => void }) {
                 className="hidden sm:inline text-xs font-medium tracking-widest uppercase transition-colors duration-300"
                 style={{ color: scrolled ? 'rgba(74,78,105,0.5)' : 'rgba(253,253,248,0.55)' }}
               >
-                Existential Psychotherapy
+                BACP Registered Support for Men
               </span>
             </div>
           </a>
