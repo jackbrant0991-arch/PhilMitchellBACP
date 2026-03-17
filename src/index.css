@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Google Fonts are loaded via index.html ─── */
+
+/* ─── CSS Custom Properties (Design Tokens) ─── */
+:root {
+  --color-sage:         #8DAA91;
+  --color-sage-light:   #A8C4AE;
+  --color-sage-dark:    #6B8A6F;
+  --color-sand:         #F5F5DC;
+  --color-sand-light:   #FDFDF8;
+  --color-sand-dark:    #E8E8CD;
+  --color-slate:        #4A4E69;
+  --color-slate-light:  #6B6F8A;
+  --color-slate-dark:   #363A4F;
+  --color-safety:       rgba(220, 38, 38, 0.15);
+  --section-padding:    96px;
+  --card-radius:        24px;
+  --pill-radius:        9999px;
+  --transition-hover:   300ms ease-out;
+  --transition-reveal:  0.6s ease-out;
+}
+
+/* ─── Base Reset ─── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--color-sand-light);
+    color: var(--color-slate);
+    line-height: 1.6;
+    min-height: 100dvh;
+  }
+
+  /* Visible focus ring for all interactive elements */
+  *:focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Smooth selection */
+  ::selection {
+    background-color: rgba(141, 170, 145, 0.25);
+    color: var(--color-slate-dark);
+  }
+
+  /* Suppress default outline; we use focus-visible above */
+  * {
+    @apply focus:outline-none;
+  }
+}
+
+/* ─── Typography Utilities ─── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .leading-relaxed-plus {
+    line-height: 1.8;
+  }
+
+  /* Hero headline responsive scale */
+  .text-hero {
+    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  /* Generous section spacing */
+  .section-py {
+    padding-top:    var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+
+  /* Pill button shape */
+  .btn-pill {
+    border-radius: var(--pill-radius);
+  }
+
+  /* Soft card shape */
+  .card-rounded {
+    border-radius: var(--card-radius);
+  }
+}
+
+/* ─── Component Layer ─── */
+@layer components {
+  /* Safety Exit — always high-contrast red tint */
+  .safety-exit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    min-height: 56px;
+    border-radius: var(--pill-radius);
+    background-color: var(--color-safety);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    color: #b91c1c;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color var(--transition-hover),
+                transform var(--transition-hover);
+  }
+
+  .safety-exit-btn:hover {
+    background-color: rgba(220, 38, 38, 0.25);
+  }
+
+  .safety-exit-btn:active {
+    transform: scale(0.97);
+  }
+
+  /* Primary CTA pill button */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border-radius: var(--pill-radius);
+    background-color: var(--color-sage);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-hover),
+                box-shadow var(--transition-hover),
+                transform var(--transition-hover);
+    box-shadow: 0 4px 20px rgba(141, 170, 145, 0.35);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-sage-dark);
+    box-shadow: 0 8px 30px rgba(141, 170, 145, 0.45);
+    transform: scale(1.03);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  /* Outline CTA */
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border-radius: var(--pill-radius);
+    border: 2px solid var(--color-sage);
+    color: var(--color-sage);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: transparent;
+    transition: background-color var(--transition-hover),
+                color var(--transition-hover),
+                transform var(--transition-hover);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-sage);
+    color: white;
+    transform: scale(1.03);
+  }
+
+  /* Somatic card */
+  .somatic-card {
+    border-radius: var(--card-radius);
+    padding: 2rem;
+    transition: transform var(--transition-hover),
+                box-shadow var(--transition-hover);
+    will-change: transform;
+  }
+
+  .somatic-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(74, 78, 105, 0.12);
+  }
+
+  /* Trust badge pill */
+  .trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--pill-radius);
+    background-color: rgba(141, 170, 145, 0.12);
+    border: 1px solid rgba(141, 170, 145, 0.25);
+    color: var(--color-sage-dark);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+}
+
+/* ─── Accessibility: Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration:        0.01ms !important;
+    animation-iteration-count: 1      !important;
+    transition-duration:       0.01ms !important;
+    scroll-behavior:           auto   !important;
+  }
+
+  /* Framer Motion overrides come from the LazyMotion config in main.tsx */
+  [data-framer-component-type] {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ─── Gentle opacity pulse for trust icons ─── */
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 0.75; }
+  50%       { opacity: 1;    }
+}
+
+.pulse-gentle {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-gentle {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* ─── Header scroll state ─── */
+.header-scrolled {
+  background-color: rgba(245, 245, 220, 0.92) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 20px rgba(74, 78, 105, 0.08);
+  padding-top:    12px !important;
+  padding-bottom: 12px !important;
+}
+
+/* ─── Mobile menu slide ─── */
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.mobile-menu-enter {
+  animation: slide-down 0.25s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-enter {
+    animation: none;
+  }
+}
+
+/* ─── Scrollbar styling (webkit) ─── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--color-sand-light); }
+::-webkit-scrollbar-thumb  { background: var(--color-sage-light); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-sage); }
